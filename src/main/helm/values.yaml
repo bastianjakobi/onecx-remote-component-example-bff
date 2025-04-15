@@ -1,0 +1,22 @@
+app:
+  name: bff
+  image:
+    repository: "onecx/onecx-remote-component-example-bff"
+  operator:
+    # Permission
+    permission:
+      enabled: true
+      spec:
+        permissions:
+          text:
+            read: Permission to read text from BFF.
+    keycloak:
+      client:
+        enabled: true
+        spec:
+          kcConfig:
+            defaultClientScopes: []
+    microservice:
+      spec:
+        description: An example for a OneCX compatible BFF.
+        name: OneCX Remote Component BFF Example
